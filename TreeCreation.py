@@ -24,7 +24,7 @@ class Tree:
             node.left=self.build_tree_al(elements)
         if elements:
             node.right=self.build_tree_al(elements)
-        
+        return node
 
 elements=[1,2,3,4,5,6,7]
 tree=Tree()
