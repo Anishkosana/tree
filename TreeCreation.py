@@ -29,3 +29,4 @@ class Tree:
 elements=[1,2,3,4,5,6,7]
 tree=Tree()
 root=tree.build_tree(elements)
+root2=tree.build_tree_al(elements)
