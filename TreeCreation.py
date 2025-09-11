@@ -13,6 +13,18 @@ class Tree:
         node.left=self.build_tree(elements,2*index+1)
         node.right=self.build_tree(elements,2*index+2)
         return node
+    def build_tree_al(self,elements):
+        if not elements:
+            return None
+        
+        val=elements.pop(0)
+        node=TreeNode(val)
+        
+        if elements:
+            node.left=self.build_tree_al(elements)
+        if elements:
+            node.right=self.build_tree_al(elements)
+        
 
 elements=[1,2,3,4,5,6,7]
 tree=Tree()
