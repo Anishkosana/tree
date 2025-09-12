@@ -31,7 +31,7 @@ class Tree:
     
     # iterative version of building tree
     
-    def build_binary_tree_iteration(elements):
+    def build_binary_tree_iteration(self,elements):
         if not elements:
             return None
         
@@ -50,7 +50,7 @@ class Tree:
         
         return root
         
-elements=[1,2,3,4,5,6,7]
+elements=[1,2,3,4,5,6,7,8]
 tree=Tree()
-root=tree.build_tree(elements)
+root=tree.build_binary_tree_iteration(elements)
 # root2=tree.build_tree_al(elements)
