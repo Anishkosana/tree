@@ -33,17 +33,17 @@ class operation:
     
 
 op=operation()
-elements=[1,2,3,4,5,6,7,8]
-tree=tc.Tree()
-node=tree.build_binary_tree_iteration(elements)
+# elements=[1,2,3,4,5,6,7,8]
+# tree=tc.Tree()
+# node=tree.build_binary_tree_iteration(elements)
 print("inorder traversal!!")
-op.inorder(node)
+op.inorder(tc.root)
 print()
 print("preorder traversal!!")
-op.postorder(node)
+op.postorder(tc.root)
 print()
 print("postorder!!")
-op.postorder(node)
+op.postorder(tc.root)
 
     
         
