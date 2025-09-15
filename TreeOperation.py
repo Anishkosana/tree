@@ -30,7 +30,19 @@ class operation:
         self.postorder(node.left)
         self.postorder(node.right)
         print(node.val,end="->")
-    
+    def inorder_iteration(self,root):
+        stack=[]
+        current=root
+        while stack or current:
+            if current:
+                stack.append(current)
+                current=current.left
+            else:
+                current=stack.pop()
+                print(current.val)
+                current=current.right
+                
+                
 
 op=operation()
 # elements=[1,2,3,4,5,6,7,8]
