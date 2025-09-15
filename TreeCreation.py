@@ -5,6 +5,10 @@ class TreeNode:
         self.right=right
 
 class Tree:
+    
+    # recursive version of binary tree
+    # recursive version of binary tree building follows DFS
+    
     def build_tree(self,elements,index=0):
         if index>=len(elements):
             return None
@@ -30,6 +34,8 @@ class Tree:
     #     return node
     
     # iterative version of building tree
+    
+    # the iterative version binary tree building follows BFS
     
     def build_binary_tree_iteration(self,elements):
         if not elements:
