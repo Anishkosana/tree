@@ -33,19 +33,98 @@ class operation:
         self.postorder(node.right)
         print(node.val,end="->")
     
+    # inorder iterative version    
+    def inorder_itr(self,root):
+        
+        if not root:
+            return 
+        
+        stack=[]
+        current=root
+        while stack or current:
+            if current:
+                stack.append(current)
+                current=current.left
+            
+            else:
+                current=stack.pop()
+                print(current.val,end="->")
+                current=current.right
+    
+    #preorder iterative version
+    def preorder_itr(self,root):
+        
+        if not root:
+            return 
+        stack=[root]
+        while stack:
+            node=stack.pop()
+            print(node.val,end="->")
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
+    
+    #postorder iterative version
+    def postorder_itr(self,root):
+        
+        if not root:return
+        
+        stack=[root]
+        out=[]
+        
+        while stack:
+            node=stack.pop()
+            out.append(node.val)
+            
+            if node.left:
+                stack.append(node.left)
+            
+            if node.right:
+                stack.append(node.right)
+                
+        while out:
+            print(out.pop(),end="->")
+        
+    #levelorder iterative version
+    def levelorder_itr(self,root):
+        if not root:return
+        
+        queue=[root]
+        
+        while queue:
+            node=queue.pop(0)
+            print(node.val,end="->")
+            if node.left:
+                queue.append(node.left)
+            
+            if node.right:
+                queue.append(node.right)
+        
+        
+        
+        
+    
 
 op=operation()
 # elements=[1,2,3,4,5,6,7,8]
 # tree=tc.Tree()
 # node=tree.build_binary_tree_iteration(elements)
-print("inorder traversal!!")
-op.inorder(tc.root)
+
+op.inorder_itr(tc.root)
+
 print()
-print("preorder traversal!!")
-op.postorder(tc.root)
+
+op.preorder_itr(tc.root)
+
 print()
-print("postorder!!")
-op.postorder(tc.root)
+
+op.postorder_itr(tc.root)
+
+print()
+
+op.levelorder_itr(tc.root)
+
 
     
         
