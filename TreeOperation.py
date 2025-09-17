@@ -41,21 +41,20 @@ class operation:
                 current=stack.pop()
                 print(current.val)
                 current=current.right
-                
-                
-
-op=operation()
-# elements=[1,2,3,4,5,6,7,8]
-# tree=tc.Tree()
-# node=tree.build_binary_tree_iteration(elements)
-print("inorder traversal!!")
-op.inorder(tc.root)
-print()
-print("preorder traversal!!")
-op.postorder(tc.root)
-print()
-print("postorder!!")
-op.postorder(tc.root)
+                              
+if name==__main__:
+        op=operation()
+        # elements=[1,2,3,4,5,6,7,8]
+        # tree=tc.Tree()
+        # node=tree.build_binary_tree_iteration(elements)
+        print("inorder traversal!!")
+        op.inorder(tc.root)
+        print()
+        print("preorder traversal!!")
+        op.postorder(tc.root)
+        print()
+        print("postorder!!")
+        op.postorder(tc.root)
 
     
         
