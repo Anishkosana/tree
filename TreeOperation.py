@@ -133,6 +133,23 @@ class operation:
             return 1
         
         return self.leaf_nodes(root.left)+self.leaf_nodes(root.right)
+    
+    #counting non leaf nodes
+    # def non_leaf_nodes(self,root):
+    #     if not root:return 0
+        
+    #     if root.left and  root.right:
+    #         return 1
+        
+    #     return self.non_leaf_nodes(root.left)+self.non_leaf_nodes(root.right)
+        
+    def non_leaf_nodes(self,root):
+        if not root:return 0
+        
+        if not root.left and  not root.right:
+            return 0
+        
+        return 1+self.non_leaf_nodes(root.left)+self.non_leaf_nodes(root.right)
         
 op=operation()
 # elements=[1,2,3,4,5,6,7,8]
@@ -152,7 +169,9 @@ op=operation()
 # print()
 
 # op.levelorder_itr(tc.root)
-print(op.leaf_nodes(tc.root))
+# print(op.leaf_nodes(tc.root))
+
+print(op.non_leaf_nodes(tc.root))
 
 
 
