@@ -31,7 +31,7 @@ class BST:
             parent.right=Node(key)
             
         return root
-        
+     #This function will call insert method for each element to build tree 
     def build(self,nums):
         
         root=None
