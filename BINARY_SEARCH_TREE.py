@@ -41,6 +41,35 @@ class BST:
         
         return root
     
+    # Merging two functions into a single function
+    def Build_BST(self,nums):
+        root=None
+        for num in nums:
+            if root is None:
+                root=Node(num)
+            continue
+            
+            curr=root
+            parent=None
+            
+            while curr:
+                parent=curr
+                
+                if num<curr.val:
+                    curr=curr.left
+                
+                else:
+                    curr=curr.right
+            
+            if num<parent.val:
+                parent.left=Node(num)
+            
+            else:
+                parent.right=Node(num)
+        
+        return root
+    
 Tree=BST()
 nums=[10,5,15,7,9]
 Tree.build(nums)
+Tree.Build_BST(nums)
