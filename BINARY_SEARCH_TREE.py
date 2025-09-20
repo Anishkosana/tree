@@ -40,3 +40,7 @@ class BST:
             root=self.insert(root,num)
         
         return root
+    
+Tree=BST()
+nums=[10,5,15,7,9]
+Tree.build(nums)
