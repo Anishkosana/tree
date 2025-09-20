@@ -68,6 +68,26 @@ class BST:
                 parent.right=Node(num)
         
         return root
+    # Recursive method for building BST
+    
+    def RBuild_BST(self,nums):
+        root=None
+        # This function insert each element
+        def insert(root,num):
+            if not root:
+                return Node(num)
+            if num<root.val:
+                root.left=insert(root.left,num)
+            
+            else:
+                root.right=insert(root.right,num)
+                
+            return root
+        
+        for num in nums:
+            root=insert(root,num)
+        
+        return root
     
 Tree=BST()
 nums=[10,5,15,7,9]
