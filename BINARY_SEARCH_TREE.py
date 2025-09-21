@@ -91,5 +91,5 @@ class BST:
     
 Tree=BST()
 nums=[10,5,15,7,9]
-Tree.build(nums)
-Tree.Build_BST(nums)
+# Tree.build(nums)
+root=Tree.RBuild_BST(nums)
