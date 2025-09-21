@@ -71,6 +71,6 @@ op=BST_OPERATION()
 # print(op.ISearch(bst.root,7))
 # print(op.RSearch(bst.root,7))
 
-# op.IInsert(bst.root,2)
+op.IInsert(bst.root,2)
 op.RInsert(bst.root,2)
 op.Inorder(bst.root)
