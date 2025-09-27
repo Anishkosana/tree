@@ -66,11 +66,32 @@ class BST_OPERATION:
             root.right=self.RInsert(root.right,key)
         
         return root
+    # finding minimum difference
+    def getMin_diff(self,root):
+        prev,min_diff=None,1000
+        stack,current=[],root
+        
+        while stack or current:
+            
+            while current:
+                stack.append(current)
+                current=current.left
+            
+            current=stack.pop()
+            
+            if prev is not None:
+                diff=current.val-prev
+                if diff<min_diff:
+                    min_diff=diff
+            prev=current.val
+            current=current.right
+        return min_diff 
         
 op=BST_OPERATION()
 # print(op.ISearch(bst.root,7))
 # print(op.RSearch(bst.root,7))
 
-op.IInsert(bst.root,2)
-op.RInsert(bst.root,2)
-op.Inorder(bst.root)
+# op.IInsert(bst.root,2)
+# op.RInsert(bst.root,2)
+# op.Inorder(bst.root)
+print("Minimum difference : ",op.getMin_diff(bst.root))
